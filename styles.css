@@ -37,7 +37,7 @@ body {
 .header {
   background-image:
     linear-gradient(to bottom, transparent 60%, white 100%),
-    url("IMAGES/background.png");
+    url("background.png");
   background-size: cover;
   background-position: center;
   padding: 200px;
