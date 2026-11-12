@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conor McCarthy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <p>Computing for Business • Dublin City University</p>
+      <h1>CONOR MCCARTHY</h1>
+    </div>
+    <div class="links-reveal">
+      <a
+        href="https://github.com/conormccarthy2"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub</a
+      >
+      <a
+        href="https://www.linkedin.com/in/conor-mccarthy-09b3b121a/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >LinkedIn</a
+      >
+    </div>
+    <hr />
+    <div class="about-me reveal">
+      <div class="about-text">
+        <h2 class="reveal">About Me</h2>
+        <h3>Hi, I'm Conor</h3>
+        <p>
+          I am a 2nd year Computing for Business student at Dublin City
+          University. I have a strong interest in software development, web
+          development and data analysis. I am always looking for new
+          opportunities to learn and grow in these areas.
+        </p>
+      </div>
+      <img src="IMAGES/IMG_6722.jpeg" alt="Conor McCarthy" />
+    </div>
+    <hr />
+    <div class="projects">
+      <h2 class="reveal">Featured Projects</h2>
+      <div class="project reveal">
+        <a href="https://github.com/Conormccarthy2/Code-Library-App">
+          <h3>Code Library</h3>
+          <p>
+            An electron app, designed to store and manage code snippets. It
+            allows users to save, edit, and organize their code snippets in a
+            user-friendly interface.
+          </p>
+          <hr />
+          <p>HTML, CSS, JavaScript, Electron</p>
+        </a>
+      </div>
+      <div class="project reveal">
+        <a href="https://github.com/Conormccarthy2/irish-weather">
+          <h3>Irish Weather</h3>
+          <p>
+            A PWA that makes use of API's to display the current weather in
+            Ireland. It allows users to search for the weather in all 32
+            counties.
+          </p>
+          <hr />
+          <p>HTML, CSS, JavaScript, PWA</p>
+        </a>
+      </div>
+      <div class="project reveal">
+        <a href="https://github.com/Conormccarthy2/Reminders">
+          <h3>Reminders app</h3>
+          <p>
+            A basic reminders app built using Electron. It allows users to
+            create and delete reminders and sorts them by date.
+          </p>
+          <hr />
+          <p>HTML, CSS, JavaScript, Electron</p>
+        </a>
+      </div>
+    </div>
+    <footer>
+      <p>mccarthy.conor@outlook.com</p>
+    </footer>
+    <script>
+      const revealItems = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.16,
+            rootMargin: "0px 0px -50px",
+          },
+        );
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+      }
+    </script>
+  </body>
+</html>
